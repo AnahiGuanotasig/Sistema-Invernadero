@@ -1,6 +1,7 @@
 {
   "name": "sistema-invernadero",
   "version": "1.0.0",
+  "type": "module",
   "description": "Sistema de gestión para invernaderos del hogar",
   "main": "index.js",
   "scripts": {
