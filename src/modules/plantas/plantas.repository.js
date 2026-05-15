@@ -1,7 +1,7 @@
 //importo la piscina de conexion del archivo database.js
 import { pool } from "../../config/database";
 
-export const CreatePlantas = async ({
+export const createPlantas = async ({
     codigo,
     nombre, 
     id_tipo,
@@ -40,13 +40,13 @@ export const CreatePlantas = async ({
     return resultado.rows[0];
 };
 
-export const GetAllPlantas = async () => {
+export const getAllPlantas = async () => {
     const query = "SELECT * FROM plantas ORDER BY id ASC";
     const resultado = await pool.query(query);
     return resultado.rows; // Retornamos el array completo de filas
 };
 
-export const GetPlanta = async (id) => {
+export const getPlanta = async (id) => {
     const query = "SELECT * FROM plantas WHERE id = $1";
     const values = [id];
     
@@ -54,7 +54,7 @@ export const GetPlanta = async (id) => {
     return resultado.rows[0]; // Retornamos solo la planta encontrada
 };
 
-export const UpdatePlanta = async (id, camposActualizados) => {
+export const updatePlanta = async (id, camposActualizados) => {
 
     const query = `
         UPDATE plantas 
@@ -77,7 +77,7 @@ export const UpdatePlanta = async (id, camposActualizados) => {
     return resultado.rows[0];
 };
 
-export const DeletePlanta = async (id) => {
+export const deletePlanta = async (id) => {
     const query = "DELETE FROM plantas WHERE id = $1 RETURNING *";
     const values = [id];
     
