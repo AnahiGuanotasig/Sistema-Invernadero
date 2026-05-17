@@ -23,7 +23,7 @@ export const getAllPlantas = async (req,res)=>{
             data:plantas
         });
     } catch (error) {
-        return res.statura(400).json({
+        return res.status(400).json({
             success:false,
             message: error.message
         });
