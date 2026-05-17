@@ -1,7 +1,6 @@
 import express from 'express';
 
 import plantasRoutes from './modules/plantas/plantas.routes.js';
-import { pl } from 'zod/locales';
 
 const app = express();
 

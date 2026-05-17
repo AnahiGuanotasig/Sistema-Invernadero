@@ -1,5 +1,5 @@
 //importo la piscina de conexion del archivo database.js
-import { pool } from "../../config/database";
+import { pool } from "../../config/database.js";
 
 export const createPlantas = async ({
     codigo,

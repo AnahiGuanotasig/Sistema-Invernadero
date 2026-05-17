@@ -1,5 +1,4 @@
-import { success } from "zod";
-import * as PlantasService from "./plantas.service"
+import * as PlantasService from "./plantas.service.js";
 
 export const createPlanta =  async (req,res)=>{
     try {

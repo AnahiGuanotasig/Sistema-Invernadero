@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import * as PlantasRepository from "./plantas.repository"
+import * as PlantasRepository from "./plantas.repository.js";
 
 //Contrato para la validacion de datos
 const plantaSchema = z.object({
